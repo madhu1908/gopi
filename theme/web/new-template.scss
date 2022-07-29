@@ -1,0 +1,91 @@
+.cards_cont{
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 20px;
+}
+.card{
+    text-align: center;
+    background-color: #ffff;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    height: 86%;
+    border: 1px solid rgb(240, 240, 240);
+    
+}
+
+.card a{
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    display: grid;
+    justify-items: center;
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.card.odd{
+    border-bottom: 2px solid #66b0c5 ;
+}
+
+.card.even{
+    border-bottom: 2px solid #66b0c5;
+}
+.card_logo{
+    margin-bottom: 15px;
+}
+.card_logo img{
+    display: flex;
+    margin: auto;
+    width: 50px;
+    
+}
+
+.card.attachement.even a::before {
+    color: #419ab4;
+    padding: 30px;
+    background-color: #a1dff0;
+    font-size: 25px;
+    padding: 10px 5px;
+    width: 50px;
+    margin: 5px 10px 15px 10px;
+    border-radius: 50%;
+   
+    font-family: "Font Awesome 5 Pro"!important;
+}
+.card.attachement.odd a::before {
+    color: #e6a666 !important;
+    padding: 30px;
+    background-color: #ffdcb9;
+    font-size: 25px;
+    padding: 10px 5px;
+    width: 50px;
+    margin: 5px 10px 15px 10px;
+    border-radius: 50%;
+   
+    font-family: "Font Awesome 5 Pro"!important;
+}
+
+
+.card:hover{
+    box-shadow: 0px 10px 22px -15px rgba(0,0,0,0.75);
+}
+
+.case_note{
+    margin: 10px 0;
+    text-decoration: none;
+    padding: 8px 10px;
+    color: black;
+    font-weight: 600;
+    background-color: #a1dff0;
+    border-radius: 20px;
+}
+.case_note:hover{
+    background-color: #6cbbd1;
+    text-decoration: none;
+    color: rgb(39, 39, 39)
+}
+.case_note:active{
+    background-color: #6cbbd1;
+    text-decoration: none;
+    color: rgb(39, 39, 39)
+}

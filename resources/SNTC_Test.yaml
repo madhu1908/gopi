@@ -1,0 +1,145 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-nginx
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
+spec:
+  tls:
+  - hosts:
+    - msf.rapiddatatech.com
+    secretName: mendix1
+  rules:
+  - host: msf.rapiddatatech.com
+    http:
+      paths:
+      - path: /home/?(.*) 
+        pathType: Prefix
+        backend:
+          service:
+            name: mendix-app-service
+            port:
+              number: 8080    
+      - path: /?(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: mendix-app-service
+            port:
+              number: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mendix-app-service
+  labels:
+    app: mendix-k8s
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: mendix-k8s
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mendix-k8s-stateful
+  labels:
+    app: mendix-k8s
+spec:
+  serviceName: mendix-app-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mendix-k8s
+  template:
+    metadata:
+      labels:
+        app: mendix-k8s
+    spec:
+      containers:
+        - name: mendix-app
+          image: gopirapid07/sntc:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080 
+          volumeMounts:
+            - mountPath: "/build/data/files"
+              name: mendix-data
+          resources:
+            limits:
+              memory: 4Gi
+            requests:
+              memory: 3Gi
+          env:
+            - name: ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: admin-password
+            - name: ADMIN_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: admin-user
+            - name: DEBUGGER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: debugger-password
+            - name: DATABASE_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: db-endpoint
+            - name: LICENSE_ID
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: license-id
+            - name: LICENSE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: license-key
+            - name: MXRUNTIME_DatabaseType
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: DatabaseType
+            - name: MXRUNTIME_DatabaseUserName
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: DatabaseUserName
+            - name: MXRUNTIME_DatabasePassword
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: DatabasePassword
+            - name: MXRUNTIME_DatabaseName
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: DatabaseName
+            - name: MXRUNTIME_DatabaseJdbcUrl
+              valueFrom:
+                secretKeyRef:
+                  name: mendix-app-secrets
+                  key: DatabaseJdbcUrl
+      imagePullSecrets:
+        - name: regcred            
+      volumes:
+        - hostPath:
+            path: "/home/docker/mendix-files"
+          name: mendix-data
+

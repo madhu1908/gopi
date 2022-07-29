@@ -1,0 +1,564 @@
+// .loginbg{
+//     background-image: url(img/Loginbg.png);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+// }
+// .loginheader{
+//     text-align: center;
+//     margin-bottom: 20px;
+
+// }
+// .loginpage-formwrapper {
+//     width: 420px;
+//     background: #fff;
+//     padding: 40px;
+//     box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%), 0 0 20px 0 rgb(0 0 0 / 19%);
+//     border-radius: 17px;
+//     border: 1px solid #9c9a9a;
+// }
+// .logocon{
+//     display: flex;
+//     justify-content: center;
+//     margin-bottom: 20px;
+// }
+// .h2{
+//     text-align: center;
+// }
+// .loginpage-form .btn {
+//     border-radius: 30px;
+//     width: 100%;
+//     padding: 8px;
+//     background-color: #308f31;
+//     background-image: linear-gradient(to right, #308f31, #6aca7c);
+//     border:1px solid #6aca7c;
+// }
+// .loginpage-form .form-group .control-label{
+//     display: none;
+// }
+// .loginpage-form .form-group .inputwrapper .form-control {
+//     padding: 10px 8px 10px 45px;
+//     width: 100%;
+//     border-radius: 30px;
+//     margin-bottom: 10px;
+//     color: #3574a9;
+//     background: #e4f3ff;
+//     &:focus{
+//         border: none;
+//     }
+//     &:active{
+//         border: none;
+//     }
+//     &:hover{
+//         border: none;
+//     }
+// }
+// .logo{
+//     width: 150px;
+// }
+// .loginpage-form .form-group .inputwrapper .glyphicon {
+//     position: absolute;
+//     top: 43%;
+//     left: 20px;
+//     transform: translateY(-50%);
+//     transition: color 0.4s;
+//         color: #3574a9;
+// }
+
+
+
+@font-face {
+    font-family: Dubai;
+    src: url('fonts/DubaiW23-Regular.eot');
+    src: url('fonts/DubaiW23-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/DubaiW23-Regular.woff2') format('woff2'),
+    url('fonts/DubaiW23-Regular.woff') format('woff'),
+    url('fonts/DubaiW23-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Dubai;
+    font-weight: 100;
+    src: url('fonts/DubaiW23-Light.eot');
+    src: url('fonts/DubaiW23-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/DubaiW23-Light.woff2') format('woff2'),
+    url('fonts/DubaiW23-Light.woff') format('woff'),
+    url('fonts/DubaiW23-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: Dubai;
+    font-weight: 500;
+    src: url('fonts/DubaiW23-Medium.eot');
+    src: url('fonts/DubaiW23-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/DubaiW23-Medium.woff2') format('woff2'),
+    url('fonts/DubaiW23-Medium.woff') format('woff'),
+    url('fonts/DubaiW23-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: Dubai;
+    font-weight: 600;
+    src: url('fonts/DubaiW23-Bold.eot');
+    src: url('fonts/DubaiW23-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/DubaiW23-Bold.woff2') format('woff2'),
+    url('fonts/DubaiW23-Bold.woff') format('woff'),
+    url('fonts/DubaiW23-Bold.ttf') format('truetype');
+}
+.loginpage-left {
+    position: relative;
+}
+
+.loginpage {
+    position: relative;
+    background-image: url('img/Desktop - 3 9.png');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    @media (min-width: 300px)
+    {
+        background-image: url('img/Desktop - 3 9.png'); 
+    }
+    @media (min-width: 900px)
+    {
+        background-image: url('img/Desktop - 3 9.png'); 
+    }
+    }
+
+/*.loginpage .loginpage-formwrapper {
+position: absolute;
+background: white;
+top: 10%;
+left: 55%;
+padding: 25px;
+top: 10%;
+border-radius: 20px;
+box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 20px;
+    }*/
+
+    .loginpage-formwrapper {
+        border-radius: 10px;
+        width: 450px;
+        background: #fff;
+        padding: 30px 20px 50px 20px;
+        box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%), 0 0 17px 0 rgb(0 0 0 / 19%);
+        .control-label{
+            display: none;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px;
+        }
+    }
+
+.logo{
+    width: 140px;
+}
+.logocon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.h2{
+    text-align: center;
+}
+.login-logo
+{
+    text-align: center;
+}
+.login-logo .logo-left img
+{
+    width: 50%;
+}
+.login-logo .logo-right img
+{
+    width: 80%;
+    float: right;
+}
+.loginpage-right h2
+ {
+        margin: 20px 0 8px 0;
+        color: #0a1325;
+        font-weight: 600;
+        line-height: 1.3;
+        text-align: center;
+        font-size: 22px;
+        font-family: 'Dubai';
+        @media (min-width: 900px)
+        {
+            font-size: 18px;
+        }
+        @media (min-width: 1024px)
+        {
+            font-size: 19px;
+        }
+        @media (min-width: 1200px)
+        {
+            font-size: 21px;
+        }
+        @media (min-width: 1280px)
+        {
+            font-size: 22px;
+        }
+    }
+.loginpage-form
+{
+    padding-left: 25px;
+    padding-right: 25px;
+    @media (min-width: 300px)
+    {
+    padding-left: 10px;
+    padding-right: 10px; 
+    }
+}
+.loginpage-form .form-control {
+    display: flex;
+    flex: 1;
+    min-width: 50px;
+    height: auto;
+    padding: 8px 8px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: #b3b3b3;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.5px solid #919191;
+    border-radius: 0px;
+    background-color: transparent !important;
+    background-image: none;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 1.428571429;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-family: 'Dubai';
+    font-weight: 500;
+    @media (min-width: 300px)
+    {
+        font-size: 12px;
+    }
+    @media (min-width: 900px)
+        {
+            font-size: 12px;
+        }
+        @media (min-width: 1024px)
+        {
+            font-size: 14px;
+        }
+        @media (min-width: 1200px)
+        {
+            font-size: 15px;
+        }
+        @media (min-width: 1280px)
+        {
+            font-size: 16px;
+        }
+}
+.loginpage-form .form-control::placeholder
+{
+    color: #b3b3b3;
+    font-family: 'Dubai';
+}
+.loginpage-form .form-group .inputwrapper .glyphicon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: #b3b3b3;
+}
+.loginpage-form input[type=checkbox]:before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    border: 2px solid #979797;
+    border-radius: 0px;
+    background-color: transparent;
+}
+.loginpage-form .checkbox label {
+    min-height: 20px;
+    padding-left: 0px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    color: #b3b3b3;
+    font-family: 'Dubai';
+    font-weight: 500;
+    font-size: 16px;
+    vertical-align: middle;
+    @media (min-width: 300px)
+    {
+        font-size: 12px;
+    }
+    @media (min-width: 900px)
+        {
+            font-size: 12px;
+        }
+        @media (min-width: 1024px)
+        {
+            font-size: 14px;
+        }
+        @media (min-width: 1200px)
+        {
+            font-size: 15px;
+        }
+        @media (min-width: 1280px)
+        {
+            font-size: 16px;
+        }
+}
+.loginpage-form  input[type=checkbox] {
+    position: relative !important;
+    width: 20px;
+    height: 20px;
+    margin: 0 !important;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin-right: 10px !important;
+    vertical-align: middle;
+}
+.btn-lg {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0.6em 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: white;
+    border: 1px;
+    border-radius: 30px !important;
+    /*background-color: #faa316;*/
+    background-image: linear-gradient(to right, #00617D, #039dc8);
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 1.428571429;
+    font-family: 'Dubai';
+    font-weight: 600;
+    width: 100%;
+    border-radius: 30px;
+    &:hover{
+        background-image: linear-gradient(to right, #00617D, #039dc8);
+    }
+    &:active{
+        background-image: linear-gradient(to right, #00617D, #039dc8);
+    }
+    &:focus{
+        background-image: linear-gradient(to right, #00617D, #039dc8);
+    }
+    @media (min-width: 300px)
+    {
+        font-size: 12px;
+    }
+    @media (min-width: 900px)
+        {
+            font-size: 12px;
+        }
+        @media (min-width: 1024px)
+        {
+            font-size: 14px;
+        }
+        @media (min-width: 1200px)
+        {
+            font-size: 15px;
+        }
+        @media (min-width: 1280px)
+        {
+            font-size: 16px;
+        }
+}
+.loginpage-form .btn .btn-success {
+    color: #000;
+    background-color: #faa316;
+    border-color: #faa316;
+}
+.loginpage-form .btn .glyphicon
+{
+    padding-right: 10px;
+}
+.loginpage-form .or
+{
+    padding: 10px 0px;
+    font-family: 'Dubai';
+    font-weight: 500;
+    font-size: 12px;
+}
+.loginpage-form .btna {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0.6em .5em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    background-color: none;
+    background-image: linear-gradient(to right, #02606a , #2aa6ae);
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 16px;
+    line-height: 1.428571429;
+    font-family: 'Dubai';
+    font-weight: 100;
+    @media (min-width: 300px)
+    {
+        font-size: 12px;
+    }
+    @media (min-width: 900px)
+        {
+            font-size: 12px;
+        }
+        @media (min-width: 1024px)
+        {
+            font-size: 14px;
+        }
+        @media (min-width: 1200px)
+        {
+            font-size: 15px;
+        }
+        @media (min-width: 1280px)
+        {
+            font-size: 16px;
+        }
+}
+.loginpage-form .btna .btn-successa {
+    color: #fff !important;
+    background-color: #02606a !important;
+    border-color: #02606a !important;
+}
+
+.loginpage-form .btna img {
+    width: 10%;
+}
+.loginpage-form input[type=checkbox]:after {
+    width: 8px;
+    height: 4px;
+    margin: 6px 5px;
+    transform: rotate(-45deg);
+    pointer-events: none;
+    border: 2px solid blue;
+    border-top: 0;
+    border-right: 0;
+}
+.form-control:not([readonly]):focus {
+   border-color: none;
+}
+.loginpage-form .form-group .inputwrapper .form-control:focus ~ .glyphicon:before {
+    color: #b3b3b3;
+}
+.glyphicon:hover {
+    background-color: none !important;
+}
+
+.logg{
+     .control-label {
+        flex: 4;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 500;
+        display:none;
+     }
+}
+
+.btn-con{
+    text-align: center;
+    background-image: linear-gradient(to right, #00617D, #039dc8);
+    border-radius: 30px;
+    background-color: #2aa6ae;
+        border-color: #2aa6ae ;
+        border: 1px solid  #039dc8 !important;
+        padding: 10px;
+            border: 1px solid #2aa6ae;
+            font-weight: 700;
+    &:hover{
+        background-image: linear-gradient(to right, #00617D, #039dc8);
+        color: white;
+    }
+    &:active{
+        background-image: linear-gradient(to right, #00617D, #039dc8);
+        color: white;
+    }
+    &:focus{
+        background-image: linear-gradient(to right, #00617D, #039dc8);
+        color: white;
+    }
+}
+.btn-lg2{
+    color: #fff;
+    text-decoration: none; 
+    &:hover{
+        color: #fff;
+        text-decoration: none; 
+    }
+    &:active{
+        color: #fff;
+        text-decoration: none; 
+    }
+    &:focus{
+        color: #fff;
+        text-decoration: none; 
+    }
+}
+.col-sm-offset-3{
+    margin-left: 10%;
+}
+.t-con{
+    .form-control {
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 1px solid #000 !important;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex: 1;
+        min-width: 50px;
+        height: auto;
+        padding: 8px 8px;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        color: #0a1325;
+         border: 0px solid #e7e7e9; 
+         border-radius: 0px; 
+        background-color: transparent;
+       
+        box-shadow: none;
+        font-size: 14px;
+        line-height: 1.428571429;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+    }
+}
+.eye-glphy{
+    position: absolute;
+    right: 32px;
+    top: 22px;
+}
+.loginpage-form .form-group .inputwrapper .glyphicon-eye-open:hover, .loginpage-form .form-group .inputwrapper .glyphicon-eye-close:hover {
+    cursor: pointer;
+    color: #b3b3b3;
+}
+.f-cbox{
+    input[type=checkbox] + .control-label {
+        margin-left: 22px ;
+        margin-top: -16px ;
+    }
+
+
+}
+.loginheader{
+    text-align: center;
+    margin-bottom: 20px;
+}

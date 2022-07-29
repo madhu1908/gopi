@@ -1,0 +1,143 @@
+.cont1{
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.jud{
+    text-align: center;
+    border-radius: 5px;
+    .mx-name-head-row {
+        background-color: #9cdbff;
+    }
+}
+
+.ben_title{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+.ben_title> h1{
+    color: #00617d;
+}
+
+.ben_form{
+    // padding: 20px;
+    // background-color:rgb(255, 255, 255);
+    // border-radius: 10px;
+    // box-shadow: 0px 0px 20px #efeded;
+}
+
+.ben_view_form{
+    padding: 15px;
+}
+
+.ben_view_form .form-control{
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+}
+
+.ben_form .form-control{
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    margin-bottom: 8px;
+}
+
+.ben_form .form-control::placeholder{
+  color: rgb(146, 146, 146);
+}
+
+.ben_cont1, .ben_cont2, .ben_cont3{
+    padding: 20px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #e8e8e8;
+    margin-bottom: 14px;
+}
+
+.ben_btn{
+    display: flex;
+    justify-content: center;
+}
+
+.ben_contact{
+    color: #298fab;
+}
+
+.ben_btn .btn{
+    margin: 0px 10px;
+    background: linear-gradient(360deg, #0054a8, #6eaaf5);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    min-width: 110px;
+    font-size: 13px;
+    // box-shadow: 0px 0px 14px #84848447;
+    &:hover{
+        background: linear-gradient(360deg, #0054a8, #6eaaf5);
+        border-radius: 10px;
+        border: none;
+        color: white;
+        min-width: 110px;
+        font-size: 13px;
+        opacity: 0.8;
+        margin: 0px 10px;
+    }
+    &:active{
+        background: linear-gradient(360deg, #0054a8, #6eaaf5);
+        border-radius: 10px;
+        border: none;
+        color: white;
+        min-width: 110px;
+        font-size: 13px;
+        margin: 0px 10px;
+    }
+    &:focus{
+        background: linear-gradient(360deg, #0054a8, #6eaaf5);
+        border-radius: 10px;
+        border: none;
+        color: white;
+        min-width: 110px;
+        font-size: 13px;
+        margin: 0px 10px;
+    }
+}
+
+.off_approval_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.off_approval_btn .btn{
+    background: linear-gradient(308deg, #2d97b5 0%, #2688a3 85%);
+    color: white;
+    border-radius: 20px;
+    min-width: 110px;
+    margin: 0px 10px;
+    border-width: 0px;
+    box-shadow: 0px 0px 14px #84848447;
+}
+
+.ben_form .mx-radiobuttons.inline .mx-radiogroup{
+    flex-direction: column;
+
+}
+.ben_form .radio >input[type=radio]:before {
+    border: 1px solid rgb(163, 163, 163);
+}
+
+
+
+
+.add_flow .mx-grid .mx-grid-content{
+    width: 550px;
+}
+
+// .ben_form .mx-grid-searchbar .mx-grid-search-label{
+//     text-align: left;
+//     text-decoration: none;
+  
+// } 
